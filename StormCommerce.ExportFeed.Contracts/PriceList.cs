@@ -20,5 +20,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public bool IsActive { get; set; }
         [DataMember(Order = 7)]
         public List<string> AvailableOnLocations { get; set; }
+        [DataMember(Order = 8)]
+        public string SalesArea { get; set; }
     }
 }

@@ -44,6 +44,8 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 4)]
         public Guid? FullUpdate { get; set; }
         [DataMember(Order = 5)]
-        public bool? fullStop { get; set; }
+        public bool? FullStop { get; set; }
+        [DataMember(Order = 6)]
+        public string BaseImageUrl { get; set; }
     }
 }
