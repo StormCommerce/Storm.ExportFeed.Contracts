@@ -7,6 +7,8 @@ namespace StormCommerce.ExportFeed.Contracts
     [DataContract]
     public enum Status
     {
+        [EnumMember(Value = "Unknown")]
+        Unknown = 0,
         [EnumMember(Value = "Active")]
         Active = 1,
         [EnumMember(Value = "Coming")]

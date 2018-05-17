@@ -8,6 +8,8 @@ namespace StormCommerce.ExportFeed.Contracts
     [DataContract]
     public enum RelationType
     {
+        [EnumMember(Value = "Unknown")]
+        Unknown = 0,
         [EnumMember(Value = "CheckoutofferAccessory")]
         CheckoutofferAccessory = 1,
         [EnumMember(Value = "FocusAccessory")]
@@ -65,6 +67,8 @@ namespace StormCommerce.ExportFeed.Contracts
     [DataContract]
     public enum ParametricType
     {
+        [EnumMember(Value = "Unknown")]
+        Unknown = 0,
         [EnumMember(Value = "Text")]
         Text = 1,
         [EnumMember(Value = "Integer")]
@@ -247,6 +251,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public FileFormat Format { get; set; }
         [DataMember(Order = 3)]
         public string Url { get; set; }
+        [DataMember(Order = 4)]
+        public string Code { get; set; }
     }
 
     public class Logistic   //Unit: cm, kg
