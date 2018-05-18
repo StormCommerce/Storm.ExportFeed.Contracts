@@ -240,7 +240,11 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 16)]
         public List<CultureName> Units { get; set; }
         [DataMember(Order = 18)]
-        public List<File> Files { get; set; }      
+        public List<File> Files { get; set; }
+        [DataMember(Order = 19)]
+        public string FreightClass { get; set; }
+        [DataMember(Order = 20)]
+        public int ProductId { get; set; }
     }
 
     public class File

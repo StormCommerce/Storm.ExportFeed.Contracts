@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>StormCommerce.ExportFeed.Contracts</id>
-    <version>1.0.1-beta3</version>
+    <version>1.0.1-beta5</version>
     <title>StormCommerce.ExportFeed.Contracts</title>
     <authors>Storm Commerce AB</authors>
     <owners>Storm Commerce AB</owners>
@@ -12,6 +12,8 @@
       Unkown enum and code to file addad.
       BaseImageUrl added to header.
       SalesArea on pricelist.
+      FreightClass
+      ProductId
     </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Storm Commerce ExportFeed Contracts</tags>
