@@ -245,6 +245,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public string FreightClass { get; set; }
         [DataMember(Order = 20)]
         public int ProductId { get; set; }
+        [DataMember(Order = 21)]
+        public string DefaultName { get; set; }
     }
 
     public class File
