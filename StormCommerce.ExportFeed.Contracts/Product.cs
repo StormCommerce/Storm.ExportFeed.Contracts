@@ -329,6 +329,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public ParametricValueList ValueList { get; set; }
         [DataMember(Order = 10)]
         public List<ParametricValueList> MultipleValueList { get; set; }
+        [DataMember(Order = 21)]
+        public int Id { get; set; }
     }
 
     public class ParametricValueList : Entity
