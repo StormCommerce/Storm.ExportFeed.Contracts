@@ -24,7 +24,7 @@ namespace StormCommerce.ExportFeed.Contracts
     }
 
     [DataContract(Namespace = "StormCommerce.ExportFeed.Contracts")]
-    public class Envelope<T1, T2> 
+    public class Envelope<T1, T2> : Entity
     {
         [DataMember(Order = 1)]
         public T1 Header { get; set; }
