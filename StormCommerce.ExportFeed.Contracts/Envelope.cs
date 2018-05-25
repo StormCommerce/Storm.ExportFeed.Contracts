@@ -47,5 +47,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public bool? FullStop { get; set; }
         [DataMember(Order = 6)]
         public string BaseImageUrl { get; set; }
+        [DataMember(Order = 7)]
+        public int ApplicationAdapterId { get; set; }
     }
 }
