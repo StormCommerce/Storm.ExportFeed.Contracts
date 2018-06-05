@@ -2,16 +2,16 @@
 <package>
   <metadata>
     <id>StormCommerce.ExportFeed.Contracts</id>
-    <version>1.0.1-beta3</version>
+    <version>1.0.1-beta9</version>
     <title>StormCommerce.ExportFeed.Contracts</title>
     <authors>Storm Commerce AB</authors>
     <owners>Storm Commerce AB</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Contracts for Export Feed.</description>
     <releaseNotes>
-      Unkown enum and code to file addad.
-      BaseImageUrl added to header.
-      SalesArea on pricelist.
+      Parametric id added.
+      Entity in Envelope.
+      ApplicationAdapterId
     </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Storm Commerce ExportFeed Contracts</tags>

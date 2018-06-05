@@ -24,7 +24,7 @@ namespace StormCommerce.ExportFeed.Contracts
     }
 
     [DataContract(Namespace = "StormCommerce.ExportFeed.Contracts")]
-    public class Envelope<T1, T2> 
+    public class Envelope<T1, T2> : Entity
     {
         [DataMember(Order = 1)]
         public T1 Header { get; set; }
@@ -47,5 +47,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public bool? FullStop { get; set; }
         [DataMember(Order = 6)]
         public string BaseImageUrl { get; set; }
+        [DataMember(Order = 7)]
+        public int ApplicationAdapterId { get; set; }
     }
 }
