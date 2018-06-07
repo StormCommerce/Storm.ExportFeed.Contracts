@@ -15,14 +15,12 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 4)]
         public decimal? OriginalPrice { get; set; } 
         [DataMember(Order = 5)]
-        public decimal Vat { get; set; }
+        public decimal VatRate { get; set; }   //e.g. 25% vatrate shall be set here as 0.25
         [DataMember(Order = 6)]
         public bool IsActive { get; set; }
         [DataMember(Order = 7)]
         public List<string> AvailableOnLocations { get; set; }
         [DataMember(Order = 8)]
         public string SalesArea { get; set; }
-        [DataMember(Order = 9)]
-        public decimal VatRate { get; set; }   //e.g. 25% vat rate shall be set here as 0.25
     }
 }
