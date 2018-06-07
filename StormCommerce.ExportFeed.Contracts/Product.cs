@@ -226,7 +226,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 9)]
         public bool Buyable { get; set; }
         [DataMember(Order = 10)]
-        public List<PriceList> PriceLists { get; set; }
+        public List<ProductPrice> ProductPrices { get; set; }
         [DataMember(Order = 11)]
         public List<CultureName> Names { get; set; }
         [DataMember(Order = 12)]
@@ -238,14 +238,12 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 15)]
         public Logistic Logistic { get; set; }
         [DataMember(Order = 16)]
-        public List<CultureName> Units { get; set; }
-        [DataMember(Order = 18)]
         public List<File> Files { get; set; }
-        [DataMember(Order = 19)]
+        [DataMember(Order = 17)]
         public string FreightClass { get; set; }
-        [DataMember(Order = 20)]
+        [DataMember(Order = 18)]
         public int ProductId { get; set; }
-        [DataMember(Order = 21)]
+        [DataMember(Order = 19)]
         public string DefaultName { get; set; }
     }
 

@@ -19,6 +19,6 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<OnHand> OnHands { get; set; }
 
         [DataMember(Order = 5)]
-        public List<PriceList> PriceLists { get; set; }
+        public List<ProductPrice> ProductPrices { get; set; }
     }
 }

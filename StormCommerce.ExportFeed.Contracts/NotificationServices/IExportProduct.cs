@@ -14,5 +14,9 @@ namespace StormCommerce.ExportFeed.Contracts.NotificationServices
         [OperationContract]
         [FaultContract(typeof(ErrorMessage_v2))]
         void ProductStatusFeed(Envelope<Header, List<ProductStatus>> request);
+
+        [OperationContract]
+        [FaultContract(typeof(ErrorMessage_v2))]
+        void ProductCatalogFeed(Envelope<Header, List<ProductCatalog>> request);
     }
 }

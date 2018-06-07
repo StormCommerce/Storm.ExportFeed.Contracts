@@ -52,8 +52,9 @@
     <Compile Include="Envelope.cs" />
     <Compile Include="NotificationServices\IExportProduct.cs" />
     <Compile Include="OnHand.cs" />
-    <Compile Include="PriceList.cs" />
+    <Compile Include="ProductPrice.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductCatalog.cs" />
     <Compile Include="ProductStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
