@@ -22,5 +22,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<string> AvailableOnLocations { get; set; }
         [DataMember(Order = 8)]
         public string SalesArea { get; set; }
+        [DataMember(Order = 9)]
+        public decimal CostPurchase { get; set; }
     }
 }
