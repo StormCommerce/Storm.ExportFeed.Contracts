@@ -3,7 +3,7 @@ using Enferno.Services.Contracts;
 
 namespace StormCommerce.ExportFeed.Contracts
 {
-    public class ProductCatalog : Entity
+    public class ProductCategory : Entity
     {
         [DataMember(Order = 1)]
         public int Id { get; set; } 
