@@ -133,7 +133,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultUniqueUrlName { get; set; }
     }
 
-    public class Popularity
+    public class Popularity : Entity
     {
         [DataMember(Order = 1)]
         public string Source { get; set; }
@@ -145,7 +145,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public int TotalRank { get; set; }
     }
 
-    public class Family
+    public class Family : Entity
     {
         [DataMember(Order = 1)]
         public string Code { get; set; }
@@ -157,7 +157,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<CultureName> Cultures { get; set; }
     }
 
-    public class Relation
+    public class Relation : Entity
     {
         [DataMember(Order = 1)]
         public RelationType Type { get; set; } 
@@ -249,7 +249,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultUniqueUrlName { get; set; }
     }
 
-    public class File
+    public class File : Entity
     {
         [DataMember(Order = 1)]
         public FileType Type { get; set; }
@@ -261,7 +261,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public string Code { get; set; }
     }
 
-    public class Logistic   //Unit: cm, kg
+    public class Logistic : Entity  //Unit: cm, kg
     {
         [DataMember(Order = 1)]
         public decimal? Width { get; set; }
