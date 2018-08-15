@@ -247,12 +247,6 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultName { get; set; }
         [DataMember(Order = 20)]
         public string DefaultUniqueUrlName { get; set; }
-        [DataMember(Order = 21)]
-        public int? SupplierLeadTimeDayCount { get; set; }
-        [DataMember(Order = 22)]
-        public decimal? RecommendedQuantity { get; set; }
-        [DataMember(Order = 23)]
-        public bool? IsRecommendedQuantityFixed { get; set; }
     }
 
     public class File : Entity
