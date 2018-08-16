@@ -11,7 +11,7 @@
     <releaseNotes>
       Added SupplierLeadTime, RecommendedQuantity and IsRecommendedQuantityFixed to Variant
     </releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2018</copyright>
     <tags>Storm Commerce ExportFeed Contracts</tags>
     <dependencies>
       <dependency id="Enferno.Services.Contracts.Message" version="1.0.1" />

@@ -133,7 +133,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultUniqueUrlName { get; set; }
     }
 
-    public class Popularity
+    public class Popularity : Entity
     {
         [DataMember(Order = 1)]
         public string Source { get; set; }
@@ -145,7 +145,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public int TotalRank { get; set; }
     }
 
-    public class Family
+    public class Family : Entity
     {
         [DataMember(Order = 1)]
         public string Code { get; set; }
@@ -157,7 +157,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<CultureName> Cultures { get; set; }
     }
 
-    public class Relation
+    public class Relation : Entity
     {
         [DataMember(Order = 1)]
         public RelationType Type { get; set; } 
@@ -226,7 +226,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 9)]
         public bool Buyable { get; set; }
         [DataMember(Order = 10)]
-        public List<PriceList> PriceLists { get; set; }
+        public List<ProductPrice> ProductPrices { get; set; }
         [DataMember(Order = 11)]
         public List<CultureName> Names { get; set; }
         [DataMember(Order = 12)]
@@ -238,15 +238,15 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 15)]
         public Logistic Logistic { get; set; }
         [DataMember(Order = 16)]
-        public List<CultureName> Units { get; set; }
-        [DataMember(Order = 18)]
         public List<File> Files { get; set; }
-        [DataMember(Order = 19)]
+        [DataMember(Order = 17)]
         public string FreightClass { get; set; }
-        [DataMember(Order = 20)]
+        [DataMember(Order = 18)]
         public int ProductId { get; set; }
-        [DataMember(Order = 21)]
+        [DataMember(Order = 19)]
         public string DefaultName { get; set; }
+        [DataMember(Order = 20)]
+        public string DefaultUniqueUrlName { get; set; }
         [DataMember(Order = 21)]
         public int? SupplierLeadTimeDayCount { get; set; }
         [DataMember(Order = 22)]
@@ -255,7 +255,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public bool? IsRecommendedQuantityFixed { get; set; }
     }
 
-    public class File
+    public class File : Entity
     {
         [DataMember(Order = 1)]
         public FileType Type { get; set; }
@@ -267,7 +267,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public string Code { get; set; }
     }
 
-    public class Logistic   //Unit: cm, kg
+    public class Logistic : Entity  //Unit: cm, kg
     {
         [DataMember(Order = 1)]
         public decimal? Width { get; set; }
