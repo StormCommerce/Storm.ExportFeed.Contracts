@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>StormCommerce.ExportFeed.Contracts</id>
-    <version>1.0.7-beta</version>
+    <version>1.0.7-beta3</version>
     <title>StormCommerce.ExportFeed.Contracts</title>
     <authors>Storm Commerce AB</authors>
     <owners>Storm Commerce AB</owners>

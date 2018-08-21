@@ -20,5 +20,8 @@ namespace StormCommerce.ExportFeed.Contracts
 
         [DataMember(Order = 5)]
         public List<ProductPrice> ProductPrices { get; set; }
+
+        [DataMember(Order = 6)]
+        public int? SupplierLeadTime { get; set; }
     }
 }
