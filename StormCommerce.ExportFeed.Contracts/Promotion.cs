@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Enferno.Services.Contracts;
 
 namespace StormCommerce.ExportFeed.Contracts
 {
@@ -152,7 +151,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 1)]
         public EffectType Type { get; set; }
         [DataMember(Order = 2)]
-        public decimal GeneralDescountPct { get; set; }
+        public decimal? GenericDiscountPct { get; set; }
         [DataMember(Order = 3)]
         public int SortOrder { get; set; }
         [DataMember(Order = 4)]
