@@ -4,6 +4,7 @@ using Enferno.Services.Contracts;
 
 namespace StormCommerce.ExportFeed.Contracts
 {
+    [DataContract]
     public class ProductStatus : Entity
     {
         [DataMember(Order = 1)]
