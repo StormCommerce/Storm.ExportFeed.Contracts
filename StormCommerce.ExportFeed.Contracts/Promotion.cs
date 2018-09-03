@@ -9,7 +9,7 @@ namespace StormCommerce.ExportFeed.Contracts
     {
         [EnumMember(Value = "CustomerFlag")]
         CustomerFlag = 1,
-        [EnumMember(Value = "BasketPRoducts")]
+        [EnumMember(Value = "BasketProducts")]
         BasketProducts = 3,
         [EnumMember(Value = "NumberOfProductsInBasket")]
         NumberOfProductsInBasket = 5,
@@ -126,22 +126,20 @@ namespace StormCommerce.ExportFeed.Contracts
     public class RequirementProductList
     {
         [DataMember(Order = 1)]
-        public int Id { get; set; }
-        [DataMember(Order = 2)]
         public int Quantity { get; set; }
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
         public string ManufacturerCode { get; set; }
-        [DataMember(Order = 4)]
+        [DataMember(Order = 3)]
         public string CategoryCode { get; set; }
-        [DataMember(Order = 5)]
+        [DataMember(Order = 4)]
         public string PartNo { get; set; }
-        [DataMember(Order = 6)]
+        [DataMember(Order = 5)]
         public string PriceListCode { get; set; }
-        [DataMember(Order = 7)]
+        [DataMember(Order = 6)]
         public string FlagCode { get; set; }
-        [DataMember(Order = 8)]
+        [DataMember(Order = 7)]
         public decimal? PriceSale { get; set; }
-        [DataMember(Order = 9)]
+        [DataMember(Order = 8)]
         public bool? IsIncVat { get; set; }
     }
 
@@ -182,6 +180,8 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 6)]
         public decimal? PriceSale { get; set; }
         [DataMember(Order = 7)]
+        public bool? IsIncVat { get; set; }
+        [DataMember(Order = 8)]
         public decimal? DiscountPct { get; set; }
     }
 }

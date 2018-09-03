@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>StormCommerce.ExportFeed.Contracts</id>
-    <version>1.0.7-beta6</version>
+    <version>1.0.7-beta7</version>
     <title>StormCommerce.ExportFeed.Contracts</title>
     <authors>Storm Commerce AB</authors>
     <owners>Storm Commerce AB</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>GenericDiscountPct nullable</description>
-    <releaseNotes>Added PromotionFeed service contract</releaseNotes>
+    <releaseNotes>BugFix in requirement name, added IsIncVat to EffectProduct and removed ID from RequirementProduct</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Storm Commerce ExportFeed Contracts</tags>
     <dependencies>
