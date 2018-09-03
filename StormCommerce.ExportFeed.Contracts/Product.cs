@@ -316,50 +316,16 @@ namespace StormCommerce.ExportFeed.Contracts
     public class Parametric : Entity
     {
         [DataMember(Order = 1)]
-        public ParametricType Type { get; set; }
-        [DataMember(Order = 2)]
-        public string DefaultName { get; set; }
-        [DataMember(Order = 3)]
-        public string DefaultDescription { get; set; }
-        [DataMember(Order = 4)]
-        public string DefaultUnitOfMeasurement { get; set; }
-        [DataMember(Order = 5)]
-        public List<ParametricCulture> Cultures { get; set; }
-        [DataMember(Order = 6)]
-        public string Code { get; set; }
-        [DataMember(Order = 7)]
-        public string Value { get; set; } // Multiple value parametrics are concatenated with comma
-        [DataMember(Order = 8)]
-        public List<CultureValue> CultureValues { get; set; } // Multiple value parametrics are concatenated with comma
-        [DataMember(Order = 9)]
-        public ParametricValueList ValueList { get; set; }
-        [DataMember(Order = 10)]
-        public List<ParametricValueList> MultipleValueList { get; set; }
-        [DataMember(Order = 21)]
         public int Id { get; set; }
-    }
-
-    public class ParametricValueList : Entity
-    {
-        [DataMember(Order = 1)]
+        [DataMember(Order = 2)]
         public string Code { get; set; }
-        [DataMember(Order = 2)]
-        public string DefaultValue { get; set; }
         [DataMember(Order = 3)]
-        public string DefaultDescription { get; set; }
+        public string Value { get; set; } // Multiple value parametrics are concatenated with comma
         [DataMember(Order = 4)]
-        public List<ParametricValueListCulture> Cultures { get; set; }
+        public List<CultureValue> CultureValues { get; set; } // Multiple value parametrics are concatenated with comma
     }
+   
 
-    public class ParametricValueListCulture : Entity
-    {
-        [DataMember(Order = 1)]
-        public string CultureCode { get; set; }
-        [DataMember(Order = 2)]
-        public string Value { get; set; }
-        [DataMember(Order = 3)]
-        public string Description { get; set; }
-    }
     public class ProductCulture : Entity
     {
         [DataMember(Order = 1)]
@@ -378,17 +344,5 @@ namespace StormCommerce.ExportFeed.Contracts
         public string Synonyms { get; set; }
         [DataMember(Order = 8)]
         public string UniqueUrl { get; set; }
-    }
-
-    public class ParametricCulture : Entity
-    {
-        [DataMember(Order = 1)]
-        public string CultureCode { get; set; }
-        [DataMember(Order = 2)]
-        public string Name { get; set; }
-        [DataMember(Order = 3)]
-        public string Description { get; set; }
-        [DataMember(Order = 4)]
-        public string UnitOfMeasurement { get; set; }
     }
 }
