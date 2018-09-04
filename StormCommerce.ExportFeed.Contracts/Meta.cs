@@ -29,22 +29,10 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 7)]
         public List<ParametricCulture> Cultures { get; set; }    
         [DataMember(Order = 8)]
-        public ParametricDefaultValueList ValueList { get; set; }
+        public ParametricValueList ValueList { get; set; }
         [DataMember(Order = 9)]
         public List<ParametricValueList> MultipleValueList { get; set; }
     }
-
-    public class ParametricDefaultValueList : Entity
-    {
-        [DataMember(Order = 1)]
-        public string Code { get; set; }
-        [DataMember(Order = 2)]
-        public string DefaultValue { get; set; }
-        [DataMember(Order = 3)]
-        public string DefaultDescription { get; set; }
-        [DataMember(Order = 4)]
-        public List<CultureValue> Cultures { get; set; }
-    }  
 
     public class ParametricCulture : Entity
     {
