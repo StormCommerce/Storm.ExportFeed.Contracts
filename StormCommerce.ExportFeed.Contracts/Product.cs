@@ -299,8 +299,6 @@ namespace StormCommerce.ExportFeed.Contracts
         public string CultureCode;
         [DataMember(Order = 2)]
         public string Value;
-        [DataMember(Order = 3)]
-        public string Description { get; set; }
     }
 
     public class CultureName : Entity

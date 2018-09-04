@@ -29,9 +29,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 7)]
         public List<ParametricCulture> Cultures { get; set; }    
         [DataMember(Order = 8)]
-        public ParametricValueList ValueList { get; set; }
-        [DataMember(Order = 9)]
-        public List<ParametricValueList> MultipleValueList { get; set; }
+        public List<ParametricValueList> ChoosableValueList { get; set; }
     }
 
     public class ParametricCulture : Entity
@@ -55,6 +53,16 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 3)]
         public string DefaultDescription { get; set; }
         [DataMember(Order = 4)]
-        public List<CultureValue> Cultures { get; set; }
+        public List<MetaCultureValue> Cultures { get; set; }
+    }
+
+    public class MetaCultureValue : Entity
+    {
+        [DataMember(Order = 1)]
+        public string CultureCode;
+        [DataMember(Order = 2)]
+        public string Value;
+        [DataMember(Order = 3)]
+        public string Description { get; set; }
     }
 }
