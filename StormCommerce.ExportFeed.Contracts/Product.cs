@@ -318,9 +318,13 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 2)]
         public string Code { get; set; }
         [DataMember(Order = 3)]
-        public string Value { get; set; } // Multiple value parametrics are concatenated with comma
+        public string Value { get; set; } 
         [DataMember(Order = 4)]
-        public List<CultureValue> CultureValues { get; set; } // Multiple value parametrics are concatenated with comma
+        public List<CultureValue> CultureValues { get; set; } 
+        [DataMember(Order = 5)]
+        public int? ListId { get; set; }
+        [DataMember(Order = 6)]
+        public List<int> MultipleIds { get; set; }
     }
    
 
