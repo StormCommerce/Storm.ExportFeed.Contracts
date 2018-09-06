@@ -47,12 +47,14 @@ namespace StormCommerce.ExportFeed.Contracts
     public class ParametricValueList : Entity
     {
         [DataMember(Order = 1)]
-        public string Code { get; set; }
+        public int Id { get; set; }
         [DataMember(Order = 2)]
-        public string DefaultValue { get; set; }
+        public string Code { get; set; }
         [DataMember(Order = 3)]
-        public string DefaultDescription { get; set; }
+        public string DefaultValue { get; set; }
         [DataMember(Order = 4)]
+        public string DefaultDescription { get; set; }
+        [DataMember(Order = 5)]
         public List<MetaCultureValue> Cultures { get; set; }
     }
 
