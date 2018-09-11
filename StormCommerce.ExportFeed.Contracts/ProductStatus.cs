@@ -4,6 +4,7 @@ using Enferno.Services.Contracts;
 
 namespace StormCommerce.ExportFeed.Contracts
 {
+    [DataContract]
     public class ProductStatus : Entity
     {
         [DataMember(Order = 1)]
@@ -20,5 +21,8 @@ namespace StormCommerce.ExportFeed.Contracts
 
         [DataMember(Order = 5)]
         public List<ProductPrice> ProductPrices { get; set; }
+
+        [DataMember(Order = 6)]
+        public int? SupplierLeadTime { get; set; }
     }
 }
