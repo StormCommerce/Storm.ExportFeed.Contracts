@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>GenericDiscountPct nullable</description>
     <releaseNotes>Meta data merged.</releaseNotes>
-    <copyright>Copyright 2018</copyright>
+    <copyright>Copyright 2018merged</copyright>
     <tags>Storm Commerce ExportFeed Contracts</tags>
     <dependencies>
       <dependency id="Enferno.Services.Contracts.Message" version="1.0.1" />
