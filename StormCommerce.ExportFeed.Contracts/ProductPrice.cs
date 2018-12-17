@@ -13,7 +13,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 3)]
         public decimal Price { get; set; }
         [DataMember(Order = 4)]
-        public decimal? OriginalPrice { get; set; } 
+        public decimal? OriginalPrice { get; set; }
         [DataMember(Order = 5)]
         public decimal VatRate { get; set; }   //e.g. 25% vatrate shall be set here as 0.25
         [DataMember(Order = 6)]

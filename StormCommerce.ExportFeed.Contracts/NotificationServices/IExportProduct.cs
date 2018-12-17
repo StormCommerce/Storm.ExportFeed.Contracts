@@ -9,7 +9,7 @@ namespace StormCommerce.ExportFeed.Contracts.NotificationServices
     {
         [OperationContract]
         [FaultContract(typeof(ErrorMessage_v2))]
-        void ProductFeed(Envelope<Header, List<Product>, Meta> request);
+        void ProductFeed(Envelope<Header, List<Product>> request);
 
         [OperationContract]
         [FaultContract(typeof(ErrorMessage_v2))]

@@ -31,7 +31,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [EnumMember(Value = "Upsell")]
         Upsell = 101,
         [EnumMember(Value = "CrossSell")]
-        CrossSell = 102,     
+        CrossSell = 102,
     }
 
     [DataContract]
@@ -160,7 +160,7 @@ namespace StormCommerce.ExportFeed.Contracts
     public class Relation : Entity
     {
         [DataMember(Order = 1)]
-        public RelationType Type { get; set; } 
+        public RelationType Type { get; set; }
         [DataMember(Order = 1)]
         public string PartNo { get; set; }
     }
@@ -218,11 +218,11 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 5)]
         public List<OnHand> OnHands { get; set; }
         [DataMember(Order = 6)]
-        public Status Status { get; set; }     
+        public Status Status { get; set; }
         [DataMember(Order = 7)]
         public string ImageKey { get; set; }
         [DataMember(Order = 8)]
-        public DateTime? StartDate { get; set; }     
+        public DateTime? StartDate { get; set; }
         [DataMember(Order = 9)]
         public bool Buyable { get; set; }
         [DataMember(Order = 10)]
@@ -299,6 +299,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public string CultureCode;
         [DataMember(Order = 2)]
         public string Value;
+        [DataMember(Order = 3)]
+        public string Description { get; set; }
     }
 
     public class CultureName : Entity
@@ -314,20 +316,50 @@ namespace StormCommerce.ExportFeed.Contracts
     public class Parametric : Entity
     {
         [DataMember(Order = 1)]
-        public int Id { get; set; }
+        public ParametricType Type { get; set; }
         [DataMember(Order = 2)]
-        public string Code { get; set; }
+        public string DefaultName { get; set; }
         [DataMember(Order = 3)]
-        public string Value { get; set; } 
+        public string DefaultDescription { get; set; }
         [DataMember(Order = 4)]
-        public List<CultureValue> CultureValues { get; set; } 
+        public string DefaultUnitOfMeasurement { get; set; }
         [DataMember(Order = 5)]
-        public int? ListId { get; set; }
+        public List<ParametricCulture> Cultures { get; set; }
         [DataMember(Order = 6)]
-        public List<int> MultipleIds { get; set; }
+        public string Code { get; set; }
+        [DataMember(Order = 7)]
+        public string Value { get; set; } // Multiple value parametrics are concatenated with comma
+        [DataMember(Order = 8)]
+        public List<CultureValue> CultureValues { get; set; } // Multiple value parametrics are concatenated with comma
+        [DataMember(Order = 9)]
+        public ParametricValueList ValueList { get; set; }
+        [DataMember(Order = 10)]
+        public List<ParametricValueList> MultipleValueList { get; set; }
+        [DataMember(Order = 21)]
+        public int Id { get; set; }
     }
-   
 
+    public class ParametricValueList : Entity
+    {
+        [DataMember(Order = 1)]
+        public string Code { get; set; }
+        [DataMember(Order = 2)]
+        public string DefaultValue { get; set; }
+        [DataMember(Order = 3)]
+        public string DefaultDescription { get; set; }
+        [DataMember(Order = 4)]
+        public List<ParametricValueListCulture> Cultures { get; set; }
+    }
+
+    public class ParametricValueListCulture : Entity
+    {
+        [DataMember(Order = 1)]
+        public string CultureCode { get; set; }
+        [DataMember(Order = 2)]
+        public string Value { get; set; }
+        [DataMember(Order = 3)]
+        public string Description { get; set; }
+    }
     public class ProductCulture : Entity
     {
         [DataMember(Order = 1)]
@@ -341,10 +373,22 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 5)]
         public string DescriptionHeader { get; set; }
         [DataMember(Order = 6)]
-        public string SubHeader { get; set; }    
+        public string SubHeader { get; set; }
         [DataMember(Order = 7)]
         public string Synonyms { get; set; }
         [DataMember(Order = 8)]
         public string UniqueUrl { get; set; }
+    }
+
+    public class ParametricCulture : Entity
+    {
+        [DataMember(Order = 1)]
+        public string CultureCode { get; set; }
+        [DataMember(Order = 2)]
+        public string Name { get; set; }
+        [DataMember(Order = 3)]
+        public string Description { get; set; }
+        [DataMember(Order = 4)]
+        public string UnitOfMeasurement { get; set; }
     }
 }
