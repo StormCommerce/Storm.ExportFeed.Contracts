@@ -26,7 +26,17 @@ namespace StormCommerce.ExportFeed.Contracts
         [EnumMember(Value = "RequireCompany")]
         RequireCompany = 14,
         [EnumMember(Value = "RequireOrExcludeCompanyFlag")]
-        RequireOrExcludeCompanyFlag = 17
+        RequireOrExcludeCompanyFlag = 17,
+        [EnumMember(Value = "RequireOrExcludeSales")]
+        RequireOrExcludeSales = 18,
+        [EnumMember(Value = "Division")]
+        Division = 19,
+        [EnumMember(Value = "BasketTotalOfManufacturerAbove")]
+        BasketTotalOfManufacturerAbove = 20,
+        [EnumMember(Value = "BasketTotalOfPriceListAbove")]
+        BasketTotalOfPriceListAbove = 21,
+        [EnumMember(Value = "UniqueCheckoutCode")]
+        UniqueCheckoutCode = 22
     }
 
     [DataContract]
