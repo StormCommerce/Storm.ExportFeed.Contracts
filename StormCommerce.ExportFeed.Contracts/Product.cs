@@ -212,8 +212,6 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultMetaDescription { get; set; }
         [DataMember(Order = 23)]
         public string DefaultMetaTags { get; set; }
-        [DataMember(Order = 24)]
-        public string ManufacturerLogoKey { get; set; }
     }
 
     public class Popularity : Entity
@@ -286,6 +284,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public string Name;
         [DataMember(Order = 4)]
         public string Description;
+        [DataMember(Order = 5)]
+        public string LogoKey { get; set; }
     }
 
     public class Variant : Entity
