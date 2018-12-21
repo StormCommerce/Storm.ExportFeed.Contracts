@@ -87,6 +87,83 @@ namespace StormCommerce.ExportFeed.Contracts
         Multiple = 102
     }
 
+    [DataContract]
+    public enum VariantType
+    {
+        [EnumMember(Value = "Standard")]
+        Standard = 1,
+        [EnumMember(Value = "Refurbished")]
+        Refurbished = 2,
+        [EnumMember(Value = "Freight")]
+        Freight = 3,
+        [EnumMember(Value = "Insurance")]
+        Insurance = 4,
+        [EnumMember(Value = "GiftCertificate")]
+        GiftCertificate = 5,
+        [EnumMember(Value = "Bid")]
+        Bid = 6,
+        [EnumMember(Value = "Download")]
+        Download = 7,
+        [EnumMember(Value = "Structure")]
+        Structure = 8,
+        [EnumMember(Value = "Invoice")]
+        Invoice = 9,
+        [EnumMember(Value = "Demo")]
+        Demo = 10,
+        [EnumMember(Value = "Service")]
+        Service = 11,
+        [EnumMember(Value = "Installation")]
+        Installation = 12,
+        [EnumMember(Value = "Accumulation")]
+        Accumulation = 13,
+        [EnumMember(Value = "ExtendedAssortment")]
+        ExtendedAssortment = 14,
+        [EnumMember(Value = "ERPExtended")]
+        ERPExtended = 15,
+        [EnumMember(Value = "ERPStandardNoStock")]
+        ERPStandardNoStock = 16,
+        [EnumMember(Value = "ERPPackage")]
+        ERPPackage = 17,
+        [EnumMember(Value = "Donations")]
+        Donations = 18,
+        [EnumMember(Value = "ERPTempOUtOfStock")]
+        ERPTempOUtOfStock = 19,
+        [EnumMember(Value = "EnvironmentalFee")]
+        EnvironmentalFee = 20,
+        [EnumMember(Value = "PackingFee")]
+        PackingFee = 21,
+        [EnumMember(Value = "Configuration")]
+        Configuration = 22,
+        [EnumMember(Value = "StructureWithoutCalc")]
+        StructureWithoutCalc = 23,
+        [EnumMember(Value = "ERPPackageWithCalc")]
+        ERPPackageWithCalc = 24,
+        [EnumMember(Value = "DisplayOnly")]
+        DisplayOnly = 25,
+        [EnumMember(Value = "ERPDownload")]
+        ERPDownload = 26,
+        [EnumMember(Value = "ERPDownloadNoStock")]
+        ERPDownloadNoStock = 27,
+        [EnumMember(Value = "ERPDownloadTempNoStock")]
+        ERPDownloadTempNoStock = 28,
+        [EnumMember(Value = "ERPStandard2")]
+        ERPStandard2 = 29,
+        [EnumMember(Value = "Standard2")]
+        Standard2 = 30,
+        [EnumMember(Value = "ERPStandardNoStock2")]
+        ERPStandardNoStock2 = 31,
+        [EnumMember(Value = "ERPTempOutOfStock2")]
+        ERPTempOutOfStock2 = 32,
+        [EnumMember(Value = "License")]
+        License = 33,
+        [EnumMember(Value = "CentRounding")]
+        CentRounding = 34,
+        [EnumMember(Value = "SalesTax")]
+        SalesTax = 35,
+        [EnumMember(Value = "FreightStructure")]
+        FreightStructure = 36
+    }
+
     public class Product : Entity
     {
         [DataMember(Order = 1)]
@@ -131,6 +208,12 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultSynonyms { get; set; }
         [DataMember(Order = 21)]
         public string DefaultUniqueUrlName { get; set; }
+        [DataMember(Order = 22)]
+        public string DefaultMetaDescription { get; set; }
+        [DataMember(Order = 23)]
+        public string DefaultMetaTags { get; set; }
+        [DataMember(Order = 24)]
+        public string ManufacturerLogoKey { get; set; }
     }
 
     public class Popularity : Entity
@@ -253,6 +336,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public decimal? RecommendedQuantity { get; set; }
         [DataMember(Order = 23)]
         public bool? IsRecommendedQuantityFixed { get; set; }
+        [DataMember(Order = 24)]
+        public VariantType Type { get; set; }   
     }
 
     public class File : Entity
@@ -378,6 +463,10 @@ namespace StormCommerce.ExportFeed.Contracts
         public string Synonyms { get; set; }
         [DataMember(Order = 8)]
         public string UniqueUrl { get; set; }
+        [DataMember(Order = 9)]
+        public string MetaDescription { get; set; }
+        [DataMember(Order = 10)]
+        public string MetaTags { get; set; }
     }
 
     public class ParametricCulture : Entity
