@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Enferno.Services.Contracts;
@@ -16,5 +17,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<string> AvailableOnStores { get; set; }
         [DataMember(Order = 5)]
         public List<string> ConnectedPriceLists { get; set; }
+		[DataMember(Order = 6)]
+		public DateTime NextDeliveryDate { get; set; }
     }
 }
