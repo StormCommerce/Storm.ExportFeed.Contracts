@@ -24,5 +24,11 @@ namespace StormCommerce.ExportFeed.Contracts
 
         [DataMember(Order = 6)]
         public int? SupplierLeadTime { get; set; }
-    }
+
+	    [DataMember(Order = 7)]
+	    public string PrimaryCategory { get; set; }
+
+	    [DataMember(Order = 8)]
+	    public int? ViewCount { get; set; }
+	}
 }
