@@ -30,5 +30,8 @@ namespace StormCommerce.ExportFeed.Contracts
 
 	    [DataMember(Order = 8)]
 	    public int? ViewCount { get; set; }
+
+	    [DataMember(Order = 9)]
+	    public decimal? SupplierOnhand { get; set; }
 	}
 }
