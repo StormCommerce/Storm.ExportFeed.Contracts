@@ -213,7 +213,7 @@ namespace StormCommerce.ExportFeed.Contracts
         [DataMember(Order = 23)]
         public string DefaultMetaTags { get; set; }
 	    [DataMember(Order = 24)]
-	    public string PrimaryCategory { get; set; }
+	    public int? PrimaryCategory { get; set; }
 	    [DataMember(Order = 25)]
 	    public int? ViewCount { get; set; }
 	}
