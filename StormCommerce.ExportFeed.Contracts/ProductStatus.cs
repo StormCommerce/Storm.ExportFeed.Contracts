@@ -26,12 +26,6 @@ namespace StormCommerce.ExportFeed.Contracts
         public int? SupplierLeadTime { get; set; }
 
 	    [DataMember(Order = 7)]
-	    public string PrimaryCategory { get; set; }
-
-	    [DataMember(Order = 8)]
-	    public int? ViewCount { get; set; }
-
-	    [DataMember(Order = 9)]
 	    public decimal? SupplierOnhand { get; set; }
 	}
 }

@@ -212,7 +212,11 @@ namespace StormCommerce.ExportFeed.Contracts
         public string DefaultMetaDescription { get; set; }
         [DataMember(Order = 23)]
         public string DefaultMetaTags { get; set; }
-    }
+	    [DataMember(Order = 24)]
+	    public string PrimaryCategory { get; set; }
+	    [DataMember(Order = 25)]
+	    public int? ViewCount { get; set; }
+	}
 
     public class Popularity : Entity
     {
