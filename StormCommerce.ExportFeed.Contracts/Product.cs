@@ -344,6 +344,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public VariantType Type { get; set; }   
         [DataMember(Order = 25)]
         public int? ViewCount { get; set; }
+        [DataMember(Order = 26)]
+        public decimal? SupplierOnHand { get; set; }
     }
 
     public class File : Entity
