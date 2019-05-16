@@ -342,6 +342,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public bool? IsRecommendedQuantityFixed { get; set; }
         [DataMember(Order = 24)]
         public VariantType Type { get; set; }   
+        [DataMember(Order = 25)]
+        public int? ViewCount { get; set; }
     }
 
     public class File : Entity
