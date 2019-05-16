@@ -24,5 +24,11 @@ namespace StormCommerce.ExportFeed.Contracts
         public string SalesArea { get; set; }
         [DataMember(Order = 9)]
         public decimal CostPurchase { get; set; }
+        [DataMember(Order = 10)]
+        public decimal? PriceRecommended { get; set; }
+        [DataMember(Order = 11)]
+        public decimal? PriceCatalog { get; set; }
+        [DataMember(Order = 12)]
+        public decimal? PriceStandard { get; set; }
     }
 }
