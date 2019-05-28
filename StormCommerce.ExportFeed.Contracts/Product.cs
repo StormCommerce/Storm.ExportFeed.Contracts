@@ -216,6 +216,8 @@ namespace StormCommerce.ExportFeed.Contracts
 	    public int? PrimaryCategory { get; set; }
 	    [DataMember(Order = 25)]
 	    public int? ViewCount { get; set; }
+        [DataMember(Order = 26)]
+        public List<string> EanCodeAliases { get; set; }
 	}
 
     public class Popularity : Entity
