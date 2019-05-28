@@ -346,6 +346,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public int? ViewCount { get; set; }
         [DataMember(Order = 26)]
         public decimal? SupplierOnHand { get; set; }
+        [DataMember(Order = 27)]
+        public List<string> EanCodeAliases { get; set; }
     }
 
     public class File : Entity
