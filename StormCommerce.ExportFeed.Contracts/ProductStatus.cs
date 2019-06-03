@@ -24,5 +24,8 @@ namespace StormCommerce.ExportFeed.Contracts
 
         [DataMember(Order = 6)]
         public int? SupplierLeadTime { get; set; }
-    }
+
+	    [DataMember(Order = 7)]
+	    public decimal? SupplierOnhand { get; set; }
+	}
 }
