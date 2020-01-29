@@ -161,7 +161,18 @@ namespace StormCommerce.ExportFeed.Contracts
         [EnumMember(Value = "SalesTax")]
         SalesTax = 35,
         [EnumMember(Value = "FreightStructure")]
-        FreightStructure = 36
+        FreightStructure = 36,
+        [EnumMember(Value = "ManagedStructure")]
+        ManagedStructure = 37,
+        [EnumMember(Value = "ManagedERPPackage")]
+        ManagedERPPackage = 38,
+        [EnumMember(Value = "ManagedERPPackageWithCalc")]
+        ManagedERPPackageWithCalc = 39,
+        [EnumMember(Value = "Virtual")]
+        Virtual = 40,
+        [EnumMember(Value = "PspGiftCard")]
+        PspGiftCard = 41
+
     }
 
     public class Product : Entity
@@ -350,6 +361,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public decimal? SupplierOnHand { get; set; }
         [DataMember(Order = 27)]
         public List<string> EanCodeAliases { get; set; }
+        [DataMember(Order = 28)]
+        public Popularity Popularity { get; set; }
     }
 
     public class File : Entity
