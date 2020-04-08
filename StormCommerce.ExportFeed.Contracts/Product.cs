@@ -259,8 +259,10 @@ namespace StormCommerce.ExportFeed.Contracts
     {
         [DataMember(Order = 1)]
         public RelationType Type { get; set; }
-        [DataMember(Order = 1)]
+        [DataMember(Order = 2)]
         public string PartNo { get; set; }
+        [DataMember(Order = 3)]
+        public string Code { get; set; }
     }
 
     public class Category : Entity
