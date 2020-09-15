@@ -171,8 +171,11 @@ namespace StormCommerce.ExportFeed.Contracts
         [EnumMember(Value = "Virtual")]
         Virtual = 40,
         [EnumMember(Value = "PspGiftCard")]
-        PspGiftCard = 41
-
+        PspGiftCard = 41,
+        [EnumMember(Value = "PayLater")]
+        PayLater = 42,
+        [EnumMember(Value = "GiftCardPaymentPlaceHolder")]
+        PspGifGiftCardPaymentPlaceHoldertCard = 43
     }
 
     public class Product : Entity
