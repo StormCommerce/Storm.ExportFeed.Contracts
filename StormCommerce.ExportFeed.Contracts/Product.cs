@@ -175,7 +175,9 @@ namespace StormCommerce.ExportFeed.Contracts
         [EnumMember(Value = "PayLater")]
         PayLater = 42,
         [EnumMember(Value = "GiftCardPaymentPlaceHolder")]
-        PspGifGiftCardPaymentPlaceHoldertCard = 43
+        PspGifGiftCardPaymentPlaceHoldertCard = 43,
+        [EnumMember(Value = "Compensation")]
+        Compensation = 44
     }
 
     public class Product : Entity
