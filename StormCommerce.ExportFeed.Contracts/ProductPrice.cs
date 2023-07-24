@@ -32,5 +32,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public decimal? PriceStandard { get; set; }
         [DataMember(Order = 13)]
         public decimal? CostUnit { get; set; }
+        [DataMember(Order = 14)]
+        public decimal? BestPrice { get; set; }
     }
 }
