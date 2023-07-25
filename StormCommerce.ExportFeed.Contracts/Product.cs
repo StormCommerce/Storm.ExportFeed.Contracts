@@ -370,6 +370,8 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<string> EanCodeAliases { get; set; }
         [DataMember(Order = 28)]
         public Popularity Popularity { get; set; }
+        [DataMember(Order = 29)]
+        public decimal HistoricBestPrice { get; set; }
     }
 
     public class File : Entity
