@@ -19,5 +19,7 @@ namespace StormCommerce.ExportFeed.Contracts
         public List<string> ConnectedPriceLists { get; set; }
 		[DataMember(Order = 6)]
 		public DateTime? NextDeliveryDate { get; set; }
+        [DataMember(Order = 7)]
+        public int? IncomingValue { get; set; }
     }
 }
