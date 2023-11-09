@@ -27,5 +27,8 @@ namespace StormCommerce.ExportFeed.Contracts
 
 	    [DataMember(Order = 7)]
 	    public decimal? SupplierOnhand { get; set; }
+
+        [DataMember(Order = 8)]
+        public decimal? HistoricBestPrice { get; set; }
 	}
 }
